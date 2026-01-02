@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayunafit - Domina Tu Metabolismo</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Configuration for Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Lexend', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                green: '#2adb7f',
+                dark: '#0f2215',
+                card: '#0f3319',
+                border: '#153d20',
+                text: '#E0E7E2'
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #0f2215;
+        color: #E0E7E2;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+</head>
+<body class="font-sans overflow-x-hidden selection:bg-brand-green selection:text-black">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-black font-bold text-lg">bolt</span>
+                </div>
+                <span class="text-xl font-bold text-white tracking-tight">Ayunafit</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Funcionalidades</a>
+                <a href="#how-it-works" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Cómo Funciona</a>
+                <a href="#reviews" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Reseñas</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="bg-brand-green hover:bg-green-400 text-brand-dark font-bold py-2.5 px-6 rounded-full text-sm transition-transform hover:scale-105 active:scale-95">
+                    Descargar App
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 px-6 overflow-hidden">
+        <!-- Background Gradients -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/20 mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
+                    </span>
+                    <span class="text-brand-green text-xs font-bold uppercase tracking-wider">Nueva v2.0 Disponible</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                    Domina Tu <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-400">
+                        Metabolismo.
+                    </span>
+                </h1>
+                
+                <p class="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+                    El compañero de ayuno definitivo. Sigue tu progreso, visualiza tu transformación corporal y únete a los retos de la comunidad.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <button class="flex items-center justify-center gap-3 bg-brand-green hover:bg-green-400 text-brand-dark font-bold py-4 px-8 rounded-full transition-all hover:shadow-[0_0_20px_rgba(19,236,73,0.3)]">
+                        <span class="material-symbols-outlined">star</span>
+                        Descargar en App Store
+                    </button>
+                    <button class="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white font-medium py-4 px-8 rounded-full border border-white/10 backdrop-blur-sm transition-colors">
+                        <span class="material-symbols-outlined">play_circle</span>
+                        Ver Video
+                    </button>
+                </div>
+
+                <div class="mt-8 flex items-center gap-4">
+                    <div class="flex -space-x-3">
+                        <img src="https://picsum.photos/40/40?random=1" alt="User" class="w-10 h-10 rounded-full border-2 border-brand-dark" />
+                        <img src="https://picsum.photos/40/40?random=2" alt="User" class="w-10 h-10 rounded-full border-2 border-brand-dark" />
+                        <img src="https://picsum.photos/40/40?random=3" alt="User" class="w-10 h-10 rounded-full border-2 border-brand-dark" />
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        <span class="text-white font-bold">10,000+</span> usuarios felices
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative">
+                <!-- Phone Mockup -->
+                <div class="relative mx-auto w-[280px] h-[580px] sm:w-[320px] sm:h-[650px] bg-gray-900 rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden animate-float ring-1 ring-white/10 z-10">
+                    <!-- Notch -->
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-xl z-20"></div>
+              
+                    <!-- Screen Content -->
+                    <div class="w-full h-full bg-[#0f2215] flex flex-col text-white pt-12 px-6 relative">
+                      
+                      <!-- Header inside phone -->
+                      <div class="flex justify-between items-center mb-8">
+                        <div>
+                          <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Ayuno Actual</p>
+                          <p class="font-bold text-lg">Protocolo 16:8</p>
+                        </div>
+                        <button class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                          <span class="material-symbols-outlined text-sm">settings</span>
+                        </button>
+                      </div>
+              
+                      <!-- Circular Progress -->
+                      <div class="relative w-56 h-56 mx-auto mb-8 flex items-center justify-center">
+                          <!-- Background Circle -->
+                          <svg class="w-full h-full transform -rotate-90">
+                              <circle
+                                  cx="112"
+                                  cy="112"
+                                  r="100"
+                                  stroke="#153d20"
+                                  strokeWidth="12"
+                                  fill="transparent"
+                              />
+                              <!-- Foreground Circle -->
+                              <circle
+                                  cx="112"
+                                  cy="112"
+                                  r="100"
+                                  stroke="#2adb7f"
+                                  strokeWidth="12"
+                                  fill="transparent"
+                                  strokeDasharray="628"
+                                  strokeDashoffset="150"
+                                  strokeLinecap="round"
+                              />
+                          </svg>
+                          <div class="absolute flex flex-col items-center">
+                              <span class="text-4xl font-bold tracking-tight">14:20</span>
+                              <span className="text-brand-green text-sm font-medium mt-1">Zona de Ayuno</span>
+                          </div>
+                      </div>
+              
+                      <!-- Stats Cards inside Phone -->
+                      <div class="grid grid-cols-2 gap-3 mb-6">
+                          <div class="bg-[#0f3319] p-3 rounded-2xl border border-[#153d20]">
+                              <div class="flex items-center gap-1 mb-1">
+                                  <span class="material-symbols-outlined text-orange-500 text-sm">local_fire_department</span>
+                                  <span class="text-[10px] text-gray-400">Calorías</span>
+                              </div>
+                              <p class="text-xl font-bold">1,240</p>
+                          </div>
+                          <div class="bg-[#0f3319] p-3 rounded-2xl border border-[#153d20]">
+                              <div class="flex items-center gap-1 mb-1">
+                                  <span class="material-symbols-outlined text-purple-400 text-sm">monitor_weight</span>
+                                  <span class="text-[10px] text-gray-400">Peso</span>
+                              </div>
+                              <p class="text-xl font-bold">75.5kg</p>
+                          </div>
+                      </div>
+              
+                      <!-- Button -->
+                      <button class="w-full bg-brand-green text-black font-bold py-4 rounded-full mt-auto mb-8 hover:bg-green-400 transition-colors">
+                          Terminar Ayuno
+                      </button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-10 border-y border-brand-border bg-brand-dark/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-border">
+                <div class="flex flex-col items-center justify-center py-4 md:py-0">
+                    <span class="text-3xl md:text-4xl font-black text-white mb-1">10k+</span>
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-widest">Usuarios Activos</span>
+                </div>
+                <div class="flex flex-col items-center justify-center py-4 md:py-0">
+                    <span class="text-3xl md:text-4xl font-black text-white mb-1">5,000+</span>
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-widest">Kilos Perdidos</span>
+                </div>
+                <div class="flex flex-col items-center justify-center py-4 md:py-0">
+                    <span class="text-3xl md:text-4xl font-black text-white mb-1">1,200</span>
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-widest">Retos Completados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                    Todo lo que necesitas para <span class="text-brand-green">estar en forma</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Herramientas integrales diseñadas para ayudarte a alcanzar tus objetivos de salud mediante el ayuno intermitente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Feature 1 -->
+                <div class="group bg-brand-card border border-brand-border rounded-3xl p-8 hover:border-brand-green/30 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-green/5 flex flex-col">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-full flex items-center justify-center text-brand-green mb-6 group-hover:bg-brand-green group-hover:text-black transition-colors duration-300">
+                        <span class="material-symbols-outlined text-3xl">timer</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Temporizador Inteligente</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">Personaliza tus ventanas de alimentación (16:8, 18:6, OMAD) y sigue tus zonas con nuestro widget intuitivo.</p>
+                    
+                    <div class="mt-auto pt-6 h-24 bg-black/20 rounded-xl flex items-center justify-center px-4 relative overflow-hidden">
+                        <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                            <div class="w-2/3 h-full bg-brand-green rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="group bg-brand-card border border-brand-border rounded-3xl p-8 hover:border-brand-green/30 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-green/5 flex flex-col">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-full flex items-center justify-center text-brand-green mb-6 group-hover:bg-brand-green group-hover:text-black transition-colors duration-300">
+                        <span class="material-symbols-outlined text-3xl">bar_chart</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Visualiza Tu Cambio</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">Registra métricas corporales como cintura, peso y estado de ánimo para ver tu transformación con gráficos hermosos.</p>
+                    
+                    <div class="mt-auto pt-6 h-24 bg-black/20 rounded-xl flex items-center justify-center px-4 relative overflow-hidden">
+                        <div class="flex items-end gap-2 h-16">
+                            <div class="w-3 bg-gray-700 h-8 rounded-t-sm"></div>
+                            <div class="w-3 bg-gray-600 h-10 rounded-t-sm"></div>
+                            <div class="w-3 bg-brand-green/50 h-12 rounded-t-sm"></div>
+                            <div class="w-3 bg-brand-green h-16 rounded-t-sm"></div>
+                            <div class="w-3 bg-brand-green/80 h-14 rounded-t-sm"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="group bg-brand-card border border-brand-border rounded-3xl p-8 hover:border-brand-green/30 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-green/5 flex flex-col">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-full flex items-center justify-center text-brand-green mb-6 group-hover:bg-brand-green group-hover:text-black transition-colors duration-300">
+                        <span class="material-symbols-outlined text-3xl">emoji_events</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Compite y Conecta</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">Únete a retos de ayuno estilo Strava para mantenerte motivado con amigos y subir en las clasificaciones.</p>
+                    
+                    <div class="mt-auto pt-6 h-24 bg-black/20 rounded-xl flex items-center justify-center px-4 relative overflow-hidden">
+                        <div class="flex -space-x-2">
+                            <div class="w-10 h-10 rounded-full bg-yellow-400 border-2 border-brand-card flex items-center justify-center text-[10px] font-bold text-black">#1</div>
+                            <div class="w-10 h-10 rounded-full bg-gray-400 border-2 border-brand-card flex items-center justify-center text-[10px] font-bold text-black">#2</div>
+                            <div class="w-10 h-10 rounded-full bg-orange-400 border-2 border-brand-card flex items-center justify-center text-[10px] font-bold text-black">#3</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 px-6 bg-brand-card border-y border-brand-border">
+         <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tu Camino hacia una Mejor Salud</h2>
+                <p class="text-gray-400">Pasos sencillos para empezar hoy mismo</p>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line -->
+                <div class="absolute left-[20px] top-4 bottom-4 w-0.5 bg-brand-border md:left-1/2 md:-ml-[1px]"></div>
+
+                <div class="flex flex-col gap-12">
+                    
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col md:flex-row gap-8">
+                        <div class="absolute left-0 md:left-1/2 md:-ml-6 w-10 h-10 rounded-full bg-brand-green border-4 border-brand-card z-10 flex items-center justify-center text-brand-dark">
+                            <span class="material-symbols-outlined text-sm font-bold">play_arrow</span>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <div class="pl-16 md:pl-0 md:w-1/2 md:px-12">
+                            <h3 class="text-xl font-bold text-white mb-2">Comienza tu Ayuno</h3>
+                            <p class="text-gray-400">Selecciona tu protocolo y pulsa iniciar. La app te notificará cuando sea hora de comer.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col md:flex-row gap-8 md:flex-row-reverse">
+                        <div class="absolute left-0 md:left-1/2 md:-ml-6 w-10 h-10 rounded-full bg-brand-green border-4 border-brand-card z-10 flex items-center justify-center text-brand-dark">
+                            <span class="material-symbols-outlined text-sm font-bold">edit_note</span>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <div class="pl-16 md:pl-0 md:w-1/2 md:px-12">
+                            <h3 class="text-xl font-bold text-white mb-2">Registra tu Progreso</h3>
+                            <p class="text-gray-400">Anota tu peso, medidas corporales y estado de ánimo diariamente para construir una racha.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col md:flex-row gap-8">
+                        <div class="absolute left-0 md:left-1/2 md:-ml-6 w-10 h-10 rounded-full bg-brand-green border-4 border-brand-card z-10 flex items-center justify-center text-brand-dark">
+                            <span class="material-symbols-outlined text-sm font-bold">flag</span>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <div class="pl-16 md:pl-0 md:w-1/2 md:px-12">
+                            <h3 class="text-xl font-bold text-white mb-2">Únete a un Reto</h3>
+                            <p class="text-gray-400">Compite con amigos en desafíos de ayuno de 7 o 30 días.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Amor de la Comunidad</h2>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-yellow-400">
+                            <span class="material-symbols-outlined text-lg fill-current">star</span>
+                            <span class="material-symbols-outlined text-lg fill-current">star</span>
+                            <span class="material-symbols-outlined text-lg fill-current">star</span>
+                            <span class="material-symbols-outlined text-lg fill-current">star</span>
+                            <span class="material-symbols-outlined text-lg fill-current">star</span>
+                        </div>
+                        <span class="text-white font-bold">4.8</span>
+                        <span class="text-gray-500 text-sm">(2,400 Reseñas)</span>
+                    </div>
+                </div>
+                <a href="#" class="text-brand-green font-bold hover:underline flex items-center gap-1">
+                    Ver todas las reseñas
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-brand-card p-8 rounded-3xl border border-brand-border">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://picsum.photos/100/100?random=1" alt="Sarah Jenkins" class="w-12 h-12 rounded-full bg-gray-700" />
+                        <div>
+                            <p class="font-bold text-white">Sarah Jenkins</p>
+                            <p class="text-xs text-brand-green uppercase tracking-wide">Perdió 5kg en 1 mes</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic leading-relaxed">"He probado todas las apps de ayuno. Ayunafit es de lejos la más limpia y motivadora. ¡Los retos me mantienen honesta!"</p>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-3xl border border-brand-border">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://picsum.photos/100/100?random=2" alt="Mark Davis" class="w-12 h-12 rounded-full bg-gray-700" />
+                        <div>
+                            <p class="font-bold text-white">Mark Davis</p>
+                            <p class="text-xs text-brand-green uppercase tracking-wide">Miembro Pro</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic leading-relaxed">"Me encanta la visualización de datos. Ver bajar mi gráfico de peso junto con mis rachas de ayuno es súper satisfactorio."</p>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-3xl border border-brand-border">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://picsum.photos/100/100?random=3" alt="Emily Chen" class="w-12 h-12 rounded-full bg-gray-700" />
+                        <div>
+                            <p class="font-bold text-white">Emily Chen</p>
+                            <p class="text-xs text-brand-green uppercase tracking-wide">Usuaria Frecuente</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic leading-relaxed">"El widget es un salvavidas. Puedo ver mi estado de ayuno directamente en mi pantalla de inicio sin abrir la app."</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto bg-[#0f3319] border border-brand-border rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+            <!-- Glow Effects -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-green/20 rounded-full blur-[80px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] pointer-events-none"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">¿Listo para transformar <br/> tu estilo de vida?</h2>
+                <p class="text-lg text-gray-400 mb-8 max-w-lg mx-auto">Descarga Ayunafit ahora y únete a miles de personas que están dominando su metabolismo.</p>
+                <button class="bg-brand-green hover:bg-green-400 text-brand-dark font-bold py-4 px-10 rounded-full text-lg shadow-lg shadow-brand-green/20 transition-all hover:scale-105">
+                    Comenzar Gratis
+                </button>
+                <p class="mt-4 text-sm text-gray-500">Disponible para iOS 15+</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-brand-border bg-brand-dark pt-12 pb-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-brand-green/20 rounded-full flex items-center justify-center">
+                        <span class="material-symbols-outlined text-brand-green text-sm">bolt</span>
+                    </div>
+                    <span class="text-lg font-bold text-white">Ayunafit</span>
+                </div>
+                <p class="text-gray-500 text-sm">© 2025 Ayunafit. Todos los derechos reservados.</p>
+            </div>
+            
+            <div class="flex gap-8 text-sm font-medium text-gray-500">
+                <a href="/politica-privacidad" class="hover:text-brand-green transition-colors">Privacidad</a>
+                <a href="#" class="hover:text-brand-green transition-colors">Términos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Scroll Script -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-brand-dark/90', 'backdrop-blur-md', 'border-b', 'border-brand-border', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-brand-dark/90', 'backdrop-blur-md', 'border-b', 'border-brand-border', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+    </script>
+</body>
+</html>
