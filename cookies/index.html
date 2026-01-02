@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Ayunafit</title>
+    <title>Política de Cookies - Ayunafit</title>
     <style>
         :root {
             --bg-dark: #0f2215;
@@ -14,13 +14,13 @@
             --text-secondary: #8E9E93;
             --green: #2adb7f;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
@@ -28,23 +28,23 @@
             background: var(--bg-dark);
             min-height: 100vh;
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 60px 24px;
         }
-        
+
         header {
             text-align: center;
             margin-bottom: 60px;
         }
-        
+
         .logo {
             font-size: 64px;
             margin-bottom: 16px;
         }
-        
+
         h1 {
             font-size: 42px;
             font-weight: 700;
@@ -54,12 +54,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .subtitle {
             font-size: 18px;
             color: var(--text-secondary);
         }
-        
+
         .last-updated {
             display: inline-block;
             background: var(--bg-card);
@@ -69,7 +69,7 @@
             color: var(--text-secondary);
             margin-top: 24px;
         }
-        
+
         .summary-box {
             background: linear-gradient(135deg, rgba(42, 219, 127, 0.1), rgba(31, 184, 106, 0.1));
             border: 1px solid var(--accent);
@@ -77,7 +77,7 @@
             padding: 24px;
             margin: 40px 0;
         }
-        
+
         .summary-box h3 {
             color: var(--accent);
             font-size: 18px;
@@ -86,19 +86,19 @@
             align-items: center;
             gap: 8px;
         }
-        
+
         .summary-box p {
             color: var(--text-primary);
             font-size: 16px;
         }
-        
+
         section {
             background: var(--bg-card);
             border-radius: 16px;
             padding: 32px;
             margin-bottom: 24px;
         }
-        
+
         h2 {
             font-size: 24px;
             font-weight: 600;
@@ -108,7 +108,7 @@
             align-items: center;
             gap: 12px;
         }
-        
+
         h2 .number {
             background: var(--accent);
             color: white;
@@ -120,32 +120,32 @@
             justify-content: center;
             font-size: 16px;
         }
-        
+
         h3 {
             font-size: 18px;
             font-weight: 600;
             color: var(--text-primary);
             margin: 24px 0 12px;
         }
-        
+
         p {
             color: var(--text-secondary);
             margin-bottom: 16px;
             font-size: 16px;
         }
-        
+
         ul {
             color: var(--text-secondary);
             padding-left: 0;
             list-style: none;
         }
-        
+
         li {
             padding: 8px 0 8px 28px;
             position: relative;
             font-size: 16px;
         }
-        
+
         li::before {
             content: "•";
             color: var(--accent);
@@ -153,7 +153,7 @@
             position: absolute;
             left: 8px;
         }
-        
+
         .highlight-box {
             background: rgba(52, 199, 89, 0.1);
             border-left: 4px solid var(--green);
@@ -161,13 +161,54 @@
             border-radius: 0 12px 12px 0;
             margin: 20px 0;
         }
-        
+
         .highlight-box p {
             color: var(--green);
             margin: 0;
             font-weight: 500;
         }
-        
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .cookie-table th,
+        .cookie-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cookie-table th {
+            background: rgba(42, 219, 127, 0.1);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .cookie-table td {
+            color: var(--text-secondary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge.green {
+            background: rgba(42, 219, 127, 0.2);
+            color: var(--green);
+        }
+
+        .badge.gray {
+            background: rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+        }
+
         .contact-box {
             background: linear-gradient(135deg, var(--bg-card), #1a1a1a);
             border-radius: 16px;
@@ -175,70 +216,52 @@
             text-align: center;
             margin-top: 40px;
         }
-        
+
         .contact-box h2 {
             justify-content: center;
         }
-        
+
         .contact-box a {
             color: var(--accent);
             text-decoration: none;
             font-weight: 500;
         }
-        
+
         .contact-box a:hover {
             text-decoration: underline;
         }
-        
+
         footer {
             text-align: center;
             padding: 40px 0;
             color: var(--text-secondary);
             font-size: 14px;
         }
-        
-        .badge-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 16px 0;
-        }
-        
-        .badge {
-            background: var(--bg-dark);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .badge.green {
-            color: var(--green);
-            border: 1px solid var(--green);
-        }
-        
-        .badge.red {
-            color: #FF453A;
-            border: 1px solid #FF453A;
-        }
-        
+
         @media (max-width: 600px) {
             .container {
                 padding: 40px 16px;
             }
-            
+
             h1 {
                 font-size: 32px;
             }
-            
+
             section {
                 padding: 24px 20px;
             }
-            
+
             h2 {
                 font-size: 20px;
+            }
+
+            .cookie-table {
+                font-size: 14px;
+            }
+
+            .cookie-table th,
+            .cookie-table td {
+                padding: 8px 12px;
             }
         }
     </style>
@@ -246,113 +269,87 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">⏱️</div>
+            <div class="logo">🍪</div>
             <h1>Ayunafit</h1>
-            <p class="subtitle">Política de Privacidad</p>
+            <p class="subtitle">Política de Cookies</p>
             <span class="last-updated">Última actualización: Enero 2026</span>
         </header>
-        
+
         <div class="summary-box">
-            <h3>✨ Resumen rápido</h3>
-            <p>Ayunafit respeta tu privacidad. Todos tus datos se almacenan <strong>únicamente en tu dispositivo</strong>. No recopilamos, transmitimos ni vendemos tu información personal a terceros. Así de simple.</p>
+            <h3>🍪 Resumen rápido</h3>
+            <p>Este sitio web utiliza cookies mínimas y esenciales para su funcionamiento. <strong>No utilizamos cookies de seguimiento ni de publicidad</strong>. Tu privacidad es nuestra prioridad.</p>
         </div>
-        
+
         <section>
-            <h2><span class="number">1</span> Datos que almacenamos</h2>
-            
-            <h3>📱 En tu dispositivo (local)</h3>
-            <p>Los siguientes datos se guardan únicamente en tu iPhone:</p>
-            <ul>
-                <li><strong>Datos de ayuno:</strong> Hora de inicio, fin, duración, hitos alcanzados</li>
-                <li><strong>Medidas corporales:</strong> Peso, cintura, brazo, pierna, pecho, cadera</li>
-                <li><strong>Preferencias:</strong> Objetivo de peso, configuración de notificaciones</li>
-                <li><strong>Progreso:</strong> Logros desbloqueados, rachas, récords personales</li>
-            </ul>
-            
-            <h3>❤️ Apple Health (opcional)</h3>
-            <p>Si eliges conectar con Apple Health:</p>
-            <ul>
-                <li>Podemos <strong>leer</strong> tu peso desde Apple Health</li>
-                <li>Podemos <strong>guardar</strong> nuevas mediciones de peso</li>
-                <li>Esta sincronización requiere tu permiso explícito</li>
-                <li>Puedes revocar el acceso en cualquier momento desde Ajustes de iOS</li>
-            </ul>
+            <h2><span class="number">1</span> ¿Qué son las cookies?</h2>
+            <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo (ordenador, tablet o móvil) cuando los visitas. Sirven para recordar información sobre tu visita, como tus preferencias de idioma o configuración.</p>
         </section>
-        
+
         <section>
-            <h2><span class="number">2</span> Cómo usamos tus datos</h2>
-            <p>Usamos tu información exclusivamente para:</p>
-            <ul>
-                <li>Mostrar tu progreso de ayuno y medidas</li>
-                <li>Calcular estadísticas, tendencias y gráficas</li>
-                <li>Enviar notificaciones locales sobre hitos (si las activas)</li>
-                <li>Sincronizar peso con Apple Health (si lo autorizas)</li>
-            </ul>
-            
+            <h2><span class="number">2</span> Cookies que utilizamos</h2>
+            <p>En el sitio web de Ayunafit utilizamos únicamente cookies esenciales para el funcionamiento básico:</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie</th>
+                        <th>Propósito</th>
+                        <th>Duración</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cloudflare (__cf_bm)</td>
+                        <td>Seguridad y protección contra bots</td>
+                        <td>30 minutos</td>
+                        <td><span class="badge green">Esencial</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
             <div class="highlight-box">
-                <p>🛡️ NO usamos tus datos para publicidad, analytics ni ningún otro propósito.</p>
+                <p>✓ NO utilizamos cookies de analytics, publicidad ni seguimiento de terceros.</p>
             </div>
         </section>
-        
+
         <section>
-            <h2><span class="number">3</span> Compartición de datos</h2>
-            
-            <div class="badge-row">
-                <span class="badge green">✓ Datos 100% locales</span>
-                <span class="badge red">✗ Sin servidores externos</span>
-                <span class="badge red">✗ Sin analytics</span>
-                <span class="badge red">✗ Sin publicidad</span>
-            </div>
-            
-            <p><strong>No compartimos tus datos con nadie:</strong></p>
+            <h2><span class="number">3</span> Cookies de terceros</h2>
+            <p>Nuestro sitio web está alojado en Cloudflare Pages, que puede establecer cookies de seguridad para:</p>
             <ul>
-                <li>No vendemos tu información</li>
-                <li>No la compartimos con anunciantes</li>
-                <li>No usamos servicios de analytics de terceros</li>
-                <li>No transmitimos datos a servidores externos</li>
+                <li>Proteger contra ataques DDoS</li>
+                <li>Distinguir entre humanos y bots</li>
+                <li>Garantizar la disponibilidad del sitio</li>
             </ul>
+            <p>Estas cookies son estrictamente necesarias y no recopilan información personal identificable.</p>
         </section>
-        
+
         <section>
-            <h2><span class="number">4</span> Seguridad</h2>
+            <h2><span class="number">4</span> Cookies en la App móvil</h2>
+            <p>La aplicación móvil Ayunafit para iOS <strong>no utiliza cookies</strong>. Todos los datos se almacenan localmente en tu dispositivo usando las APIs nativas de iOS.</p>
+            <p>Para más información sobre cómo manejamos tus datos en la app, consulta nuestra <a href="/politica-privacidad" style="color: var(--accent);">Política de Privacidad</a>.</p>
+        </section>
+
+        <section>
+            <h2><span class="number">5</span> Cómo gestionar las cookies</h2>
+            <p>Puedes controlar y eliminar las cookies a través de la configuración de tu navegador:</p>
             <ul>
-                <li>Todos los datos se almacenan usando las APIs seguras de iOS</li>
-                <li>Los datos de HealthKit están protegidos por Apple</li>
-                <li>Si eliminas la app, todos los datos locales se eliminan</li>
-                <li>Puedes borrar tus datos manualmente desde Ajustes → "Borrar todos los datos"</li>
+                <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+                <li><strong>Safari:</strong> Preferencias → Privacidad → Gestionar datos de sitios web</li>
+                <li><strong>Firefox:</strong> Opciones → Privacidad y seguridad → Cookies</li>
+                <li><strong>Edge:</strong> Configuración → Privacidad → Cookies</li>
             </ul>
+            <p>Ten en cuenta que bloquear las cookies esenciales puede afectar el funcionamiento del sitio web.</p>
         </section>
-        
+
         <section>
-            <h2><span class="number">5</span> Tus derechos</h2>
-            <p>Tienes control total sobre tus datos:</p>
-            <ul>
-                <li><strong>Acceder:</strong> Todos tus datos están visibles en la app</li>
-                <li><strong>Eliminar:</strong> Borra todo en Ajustes → Zona de peligro</li>
-                <li><strong>Revocar HealthKit:</strong> Desde Ajustes de iOS → Salud → Acceso a datos</li>
-                <li><strong>Desactivar notificaciones:</strong> Desde Ajustes de la app o de iOS</li>
-            </ul>
+            <h2><span class="number">6</span> Actualizaciones de esta política</h2>
+            <p>Podemos actualizar esta política de cookies periódicamente. Cualquier cambio será publicado en esta página con una nueva fecha de actualización.</p>
         </section>
-        
-        <section>
-            <h2><span class="number">6</span> Menores de edad</h2>
-            <p>Ayunafit no está diseñada para menores de 17 años. El ayuno intermitente no es apropiado para niños o adolescentes en desarrollo.</p>
-        </section>
-        
-        <section>
-            <h2><span class="number">7</span> Aviso médico</h2>
-            <p>Ayunafit es una herramienta de seguimiento personal y <strong>no proporciona consejo médico</strong>. La información sobre zonas metabólicas es orientativa y basada en estudios generales.</p>
-            <p>Consulta con un profesional de la salud antes de comenzar cualquier régimen de ayuno, especialmente ayunos prolongados.</p>
-        </section>
-        
-        <section>
-            <h2><span class="number">8</span> Cambios</h2>
-            <p>Si actualizamos esta política, publicaremos la nueva versión aquí con la fecha actualizada. Los cambios significativos se comunicarán a través de la app.</p>
-        </section>
-        
+
         <div class="contact-box">
             <h2>📬 Contacto</h2>
-            <p>¿Preguntas sobre privacidad?</p>
+            <p>¿Preguntas sobre cookies?</p>
             <p><a href="mailto:privacy@ayunafit.com">privacy@ayunafit.com</a></p>
             <p style="margin-top: 16px; font-size: 14px; color: var(--text-secondary);">
                 <strong>HURTADO GLOBAL MEDIA GROUP S DE RL DE CV</strong><br>
@@ -361,12 +358,10 @@
                 RFC: HGM160624EP4
             </p>
         </div>
-        
+
         <footer>
             <p>© 2026 Ayunafit. Todos los derechos reservados.</p>
             <p>HURTADO GLOBAL MEDIA GROUP S DE RL DE CV</p>
-            <p style="margin-top: 8px; font-size: 12px;">Avenida Nuevo León 161, 2º piso 201, sección C, Hipódromo, 06100, Cuauhtémoc, Ciudad de México</p>
-            <p style="font-size: 12px;">RFC: HGM160624EP4</p>
         </footer>
     </div>
 </body>
